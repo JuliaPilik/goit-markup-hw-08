@@ -1,0 +1,83 @@
+.site-nav {
+
+    @media screen and (max-width:767px) {
+    &__item+&__item {
+            margin-top: 32px;
+        }
+    }
+    @media screen and (min-width:768px) {
+        display: flex;
+
+        &__item+&__item {
+                margin-left: 50px;
+            }
+    }
+  
+}
+
+.main-nav__site-nav {
+   
+    @media screen and (min-width:768px) {
+        margin-left: 88px;
+    }
+    @media screen and (min-width:1200px) {
+        margin-left: 93px;
+    }
+ }
+
+    .site-nav__link {
+       
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.175;
+        letter-spacing: 0.02em;
+        color: var(--title-text-color);
+        text-decoration: none;
+
+        @media screen and (min-width: 768px) {
+            position: relative;
+            display: block;
+            padding: 32px 0;
+            font-size: 14px;
+            line-height: 1.14;
+            color: var(--title-text-color);
+
+        
+            &::after {
+                        position: absolute;
+                        left: 0;
+                        bottom: -1px;
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 4px;
+                        background-color: var(--accent-color);
+                        border-radius: 2px;
+                        opacity: 0;
+                        transition: opacity var(--timing-function);
+                    }
+    
+                    &--active::after {
+                        position: absolute;
+                        left: 0;
+                        bottom: -1px;
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 4px;
+                        background-color: var(--accent-color);
+                        border-radius: 2px;
+                        opacity: 1;
+                        }
+    
+                    &:hover::after {
+                        opacity: 1;
+                        }
+            }
+
+            &:hover,
+            &:focus,
+            &--active {
+                color: var(--accent-color);
+            }
+    }

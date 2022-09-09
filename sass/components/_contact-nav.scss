@@ -1,0 +1,105 @@
+.contact-nav {
+    display:flex;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column-reverse;
+        margin-top:auto;
+   
+
+        &__item:not(:last-child) {
+            margin-top: 32px;
+        }
+        &__icon {
+           display:none; 
+        }
+    }
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+        margin-left:auto;
+
+        &__item+&__item {
+                margin-top: 10px;
+            }
+
+        &__icon {
+            margin-right: 8px;
+            fill: currentColor;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        margin-left: auto;
+
+        &__item+&__item {
+                margin-left: 30px;
+                margin-top:0;
+            }
+        &__icon {
+            margin-right: 10px;
+            fill: currentColor;
+        }
+    }
+
+}
+.contact-nav__link {
+
+        color: var(--primary-text-color);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+
+        display: flex;
+        align-items: center;
+        transition: color var(--timing-function);
+
+        @media screen and (min-width: 768px) {
+            font-size: 12px;
+            line-height: 1.17;
+
+            &:hover,
+            &:focus {
+                    color: var(--accent-color);
+            }
+        }            
+}
+
+ @media screen and (max-width: 767px) {
+    .contact-nav__link--tel {
+        font-size: 34px;
+        line-height: 1.18;
+        color: var(--accent-color);
+    }   
+ }
+
+.social-nav {
+    display:flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+
+    &__item {
+        padding: 0 10px;
+    }
+
+    &__item:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 0.02em;
+        color: var(--accent-color);
+    }
+}  
+.main-nav__social-nav {
+    margin-top: 64px;
+}

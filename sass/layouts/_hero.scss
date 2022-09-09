@@ -1,0 +1,85 @@
+.hero {
+    margin: 0 auto;
+    text-align: center;
+    height: 400px;
+    width:100%;
+    background-color: var(--bg-hero);
+    background-image: linear-gradient(var(--gradient-hero), var(--gradient-hero)), url(../images/hero480.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(var(--gradient-hero), var(--gradient-hero)), url(../images/hero480-2x.jpg);
+     }
+
+   
+
+    @media screen and (min-width:768px) {
+
+            background-image: linear-gradient(var(--gradient-hero), var(--gradient-hero)), url(../images/hero768.jpg);
+
+            @media (min-device-pixel-ratio: 2),
+                (-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(var(--gradient-hero), var(--gradient-hero)), url(../images/hero768-2x.jpg);
+                }
+    }
+
+    @media screen and (min-width:1200px) {
+        background-image: linear-gradient(var(--gradient-hero), var(--gradient-hero)), url(../images/hero.jpg);
+        height: 600px;
+
+            @media (min-device-pixel-ratio: 2),
+                (-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(var(--gradient-hero), var(--gradient-hero)), url(../images/hero-2x.jpg);
+            }
+        }
+
+    &__title {
+            color: var(--white-color);
+            font-weight: 900;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+
+            font-size: 26px;
+            line-height: 1.62;
+                
+            margin-top: 0;
+            margin-bottom: 30px;
+            margin-right: auto;
+            margin-left: auto;
+
+            @media screen and (min-width: 768px) {
+                width: 360px;
+            }
+
+            @media screen and (min-width: 1200px) {
+                width: 696px;
+                font-size: 44px;
+                line-height: 1.3636;
+            }
+    
+    }
+
+    &__button {
+            margin: 0 auto;
+    }
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    height: 100%;
+}
+
+
+

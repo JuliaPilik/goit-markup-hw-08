@@ -1,0 +1,44 @@
+.we-doing {
+    padding: 0 0 94px 0;
+    display:block;
+    @media screen and(max-width:1199px) {
+    display: none;
+    }
+        &__title {
+            margin-bottom: 50px;
+        }
+    
+        &__list {
+            display: flex;
+        }
+    
+        &__item {
+            margin-right: 30px;
+        }
+    
+        &__item:nth-child(3n) {
+            margin-right: 0;
+        }
+    
+        &__thumb {
+            position: relative;
+        }
+    
+        &__text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            min-height: 70px;
+            background-color: var(--work-descr-color);
+    
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.14;
+            text-align: center;
+            text-transform: uppercase;
+            color: var(--white-color);
+            padding: 27px 0;
+        }
+}
+

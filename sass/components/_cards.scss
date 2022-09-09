@@ -1,0 +1,111 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+
+    &__item {
+        .cards>& {
+            width:100%;
+            margin-top: var(--works-list-top-gap);
+
+            @media screen and (min-width:768px) {
+
+                width: calc((100% -  var(--works-list-top-gap)) / 2);
+                margin-top: var(--works-list-top-gap);
+                margin-right: var(--works-list-top-gap);
+               
+            }
+
+            @media screen and (min-width:1200px) {
+
+                width: calc((100% - 2*var(--works-list-top-gap)) / 3);
+                margin-top: var(--works-list-top-gap);
+                margin-right: var(--works-list-top-gap);
+            }
+    
+        }
+
+        @media screen and (min-width:768px) and (max-width:1199px) {
+        .cards>&:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+        @media screen and (min-width:1200px) {
+            .cards>&:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+    
+        
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        transition: box-shadow var(--timing-function);
+        height:100%;
+
+        &:hover {
+                box-shadow: var(--works-list-shadow);
+            }
+    }
+    
+    &__thumb {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        left: 0;
+
+        background: rgba(33, 150, 243, 0.9);
+        color: var(--white-color);
+        font-size: 18px;
+        line-height: 1.56;
+        padding: 63px 24px;
+        overflow: hidden;
+        transition: transform var(--timing-function);
+
+
+        .cards__link:hover & {
+                transform: translateY(-100%);
+        
+            }
+    }
+
+    &__meta {
+        padding: 20px 24px;
+        background: var(--white-color);
+        border-right: var(--works-list-border);
+        border-bottom: var(--works-list-border);
+        border-left: var(--works-list-border);
+
+        flex-grow:1;
+        
+    }
+
+    &__title {
+        color: var(--title-text-color);
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2.0;
+        letter-spacing: 0.06em;
+        margin-top: 0;
+        margin-bottom: 4px;
+    }
+    &__type {
+        font-size: 16px;
+        line-height: 1.88;
+        color: var(--primary-text-color);
+        margin: 0;
+    }
+
+}
+.works__cards {
+    margin-top: calc(-1 * var(--works-list-top-gap));
+}

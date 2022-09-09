@@ -1,0 +1,45 @@
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    
+    @media screen and (min-width:768px) {
+        justify-content: center;
+    }
+
+    &__button {
+        color: var(--title-text-color);
+        background-color: var(--button-bg-color);
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        text-align: center;
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 6px 22px;
+        transition: color var(--timing-function), background-color var(--timing-function), box-shadow var(--timing-function);
+
+            &:hover,
+            &:focus {
+                    color: var(--white-color);
+                    background-color: var(--accent-color);
+                    box-shadow: var(--filter-button-shadow);
+                }
+    }
+    &__item {
+        margin-top: 15px;
+    }
+    &__item:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+.works__filter {
+    margin-bottom: 40px;
+    margin-top: -15px;
+}
+
+
+
