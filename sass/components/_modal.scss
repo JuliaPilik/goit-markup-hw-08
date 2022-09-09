@@ -6,17 +6,29 @@
     border-radius: 4px;
     transition: transform var(--timing-function);
 
+    @media screen and (min-width:480px) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 609px;
+    }
+
     @media screen and (min-width:768px) {
     
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 450px;
+        height: 609px;
+    }
+
+    @media screen and (min-width:1200px) {
         width: 528px;
         height: 581px;
     }
-
-
     .backdrop.is-hidden & {
             transform: scale(0.5, 0.5) translate(-100%, -100%);
         }

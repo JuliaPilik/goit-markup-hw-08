@@ -96,13 +96,13 @@
     color: var(--primary-text-color);
 
     display: flex;
-    align-items: center;
     justify-content: center;
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:1200px) {
     
     font-size: 14px; 
     line-height: 1.71;
+    align-items: center;
     }
 }
 

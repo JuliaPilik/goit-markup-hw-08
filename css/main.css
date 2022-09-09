@@ -285,12 +285,16 @@ img {
 .menu-overlay {
   display: flex;
   width: 100%;
-  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .menu-overlay {
     flex-direction: column;
     height: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-overlay {
+    align-items: center;
   }
 }
 
@@ -590,6 +594,11 @@ img {
   text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .benefits__title {
+    text-align: left;
+  }
 }
 .benefits__text {
   font-size: 14px;
@@ -988,12 +997,28 @@ img {
   border-radius: 4px;
   transition: transform var(--timing-function);
 }
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 609px;
+  }
+}
 @media screen and (min-width: 768px) {
   .modal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
     width: 528px;
     height: 581px;
   }
@@ -1127,13 +1152,13 @@ img {
   line-height: 1.17;
   color: var(--primary-text-color);
   display: flex;
-  align-items: center;
   justify-content: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .form-modal__check-title {
     font-size: 14px;
     line-height: 1.71;
+    align-items: center;
   }
 }
 
@@ -1192,6 +1217,16 @@ img {
 .works__filter {
   margin-bottom: 40px;
   margin-top: -15px;
+}
+@media screen and (min-width: 768px) {
+  .works__filter {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .works__filter {
+    margin-bottom: 50px;
+  }
 }
 
 .cards {
